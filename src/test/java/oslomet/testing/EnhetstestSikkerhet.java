@@ -95,11 +95,13 @@ public class EnhetstestSikkerhet {
         Sikkerhet.loggUt();
         assertNull(session.getAttribute("Innlogget"));
     }
+
     @Test
     public void test_loggInnAdmin(){
         String Resultat = Sikkerhet.loggInnAdmin("Admin", "Admin");
         assertEquals("Logget inn", Resultat);
     }
+
     @Test
     public void test_loggInnAdminFeil(){
         String Resultat = Sikkerhet.loggInnAdmin("admin", "");
